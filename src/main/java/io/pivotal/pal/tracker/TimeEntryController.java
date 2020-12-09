@@ -36,7 +36,7 @@ public class TimeEntryController {
         List<TimeEntry> list = timeEntryRepo.list();
         return new ResponseEntity<List<TimeEntry>>(list, HttpStatus.OK);
     }
-    @PutMapping("time-entries/{timeEntryId}")
+    @PutMapping("/time-entries/{timeEntryId}")
     public ResponseEntity<TimeEntry> update(@PathVariable long timeEntryId, @RequestBody TimeEntry timeEntryToUpdate) {
 
             TimeEntry update = timeEntryRepo.update(timeEntryId, timeEntryToUpdate);
